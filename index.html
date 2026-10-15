@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InkDesk | Tasks</title>
+</head>
+<body>
+  <main class="desk">
+    <header class="desk-head">
+      <p class="kicker">InkDesk</p>
+      <h1>Today’s list</h1>
+      <p class="subtitle">Write it down. Check it off. It stays on this device.</p>
+    </header>
+
+    <form id="todo-form">
+      <label class="sr-only" for="todo-input">New task</label>
+      <input id="todo-input" type="text" placeholder="Add a task…" maxlength="120" required autocomplete="off" />
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="toolbar">
+      <p id="task-count">0 tasks remaining</p>
+      <div class="filters" role="tablist" aria-label="Filter tasks">
+        <button type="button" class="filter active" data-filter="all">All</button>
+        <button type="button" class="filter" data-filter="active">Active</button>
+        <button type="button" class="filter" data-filter="completed">Done</button>
+      </div>
+    </div>
+
+    <p id="empty-state" class="empty" hidden>No tasks here yet. Add one above.</p>
+    <ul id="todo-list"></ul>
+
+    <div class="foot-actions">
+      <button id="clear-completed" class="ghost" type="button">Clear completed</button>
+    </div>
+  </main>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>
